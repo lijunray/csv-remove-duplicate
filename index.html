@@ -3,14 +3,27 @@
     <head>
         <title>Remove Blanks</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="./favicon.jpeg">
     </head>
 
     <body>
-        <div style="text-align: center; height: 400px; padding-top: 100px">
-            <input type="file" id="fileToUpload" />
-            <input type="text" id="col" placeholder="The name of duplicate column" />
-            <button onclick="handle()">Submit</button>
+        <div class="container" style="height: 500px">
+            <div style="margin: 30px; text-align: center">
+                <a href="https://github.com/lijunray/csv-remove-duplicate" target="_blank">Source Code</a>
+            </div>
+            <div class="form-group" style="margin: 30px">
+                <div class="col-lg-6">
+                    <input class="form-control" type="file" id="fileToUpload" />
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input class="form-control" type="text" id="col" placeholder="The name of duplicate column, e.g. AgencyCode" />
+                        <span class="input-group-btn"><button class="btn btn-default" onclick="handle()">Submit</button></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <script src="./papaparse.min.js"></script>
