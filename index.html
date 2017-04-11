@@ -37,9 +37,7 @@
                     header: true,
                     dynamicTyping: true,
                     complete: function(res) {
-                        console.log(res);
                         var toWrite = removeDuplicate(res.data, col);
-                        console.log(toWrite);
                         var blob = new Blob([Papa.unparse(toWrite)], {type: "text/plain;charset=utf-8"});
                         invokeSaveAsDialog(blob, 'text.csv');
                     }
@@ -50,7 +48,6 @@
         function removeDuplicate(data, col) {
             var filteredWorkSheet = {};
             return data.filter(function(d) {
-                console.log(filteredWorkSheet);
                 var key = d[col];
                 if (filteredWorkSheet[key] === undefined || key < 0 || key === 99999) {
                     filteredWorkSheet[key] = 1;
